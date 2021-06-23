@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 // const questions = [];
@@ -16,12 +18,12 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What is the installation process for your app?',
+            message: 'What are the steps required to install your project?',
             name: 'installation',
         },
         {
             type: 'input',
-            message: 'How does someone use your app?',
+            message: 'Provide instructions and examples for use.',
             name: 'usage',
         },
         {
@@ -30,11 +32,11 @@ inquirer
             choices: ['The Unlicense', 'MIT', 'Apache 2.0 License', 'Mozilla Public License 2.0', 'Boost'],
             name: 'license',
         },
-        {
-            type: 'input',
-            message: '',
-            name: 'contributing',
-        },
+        // {
+        //     type: 'input',
+        //     message: '',
+        //     name: 'contributing',
+        // },
         {
             type: 'input',
             message: 'Whats your github username?',
@@ -52,8 +54,40 @@ inquirer
         // },
     ])
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    // TODO: Create a function to write README file
+    // function writeToFile(fileName, data) {}
+    .then((answers) => {
+        console.log(answers);
+
+let readMeFile = `# ${answers.title} \n
+## Description \n 
+${answers.description} \n 
+## Table of Contents \n
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
+\n
+## Installation
+${answers.installation} \n
+
+## Usage
+${answers.usage} \n
+
+## Questions
+If you have any questions about my project, please find me on <a href="${github}" target="blank">GitHub</a>!
+
+## License
+----------- \n
+
+
+`;
+
+        fs.writeFile('test.md', readMeFile, (err) =>
+            err ? console.error(err) : console.log('Success!')
+        );
+    })
 
 // TODO: Create a function to initialize app
 function init() {}

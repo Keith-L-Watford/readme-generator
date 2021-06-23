@@ -8,7 +8,19 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  switch (whichLicense) {
+    case "MIT":
+    "LICENSE TEST LICENSE"
+        break;
+    // case value:
+
+    //     break;
+
+    default:
+        "No License Used";
+}
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
