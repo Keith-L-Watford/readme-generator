@@ -56,36 +56,33 @@ inquirer
         console.log(answers);
 
         let readMeFile = `# ${answers.title} \n
-## Description \n 
+## Description
 ${answers.description} \n 
-## Table of Contents \n
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-- [License](#license)
+- [License](#license) \n
 
-\n
 ## Installation
 ${answers.installation} \n
 
 ## Usage
-${answers.usage} \n
+${answers.usage}\n
 
 ## Contributing
 ${answers.contributing} \n
 
 ## Tests
-${answers.tests} \n
+${answers.test} \n 
 
 ## Questions
-If you have any questions about my project, please find me on <a href="https://github.com/${answers.github}/" target="blank">GitHub</a>!
+If you have any questions about my project, please find me on <a href="https://github.com/${answers.github}/" target="blank">GitHub</a>! \n
 
 ## License
------------ \n
-
-
+-----------
 `;
 
         fs.writeFile('test.md', readMeFile, (err) =>
