@@ -82,14 +82,14 @@ ${answers.contributing} \n
 ${answers.test} \n 
 
 ## Questions
-If you have any questions about my project, please send me an  <a href="mailto:${answers.email}/" target="blank">email</a>! \n
+If you have any questions about my project, please send me an  <a href="mailto:${answers.email}/" target="blank">email</a>. \n
 Find me on <a href="https://github.com/${answers.github}/" target="blank">GitHub</a> too! \n
 
 ## License
 -----------
 `;
 
-        fs.writeFile('test.md', readMeFile, (err) =>
+        fs.writeFile('./createdREADMEs/test.md', readMeFile, (err) =>
             err ? console.error(err) : console.log('Success!')
         );
     })
