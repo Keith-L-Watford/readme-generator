@@ -1,6 +1,17 @@
+const index = require('./../index');
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  switch (licence) {
+    case "MIT":
+      '[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
+      break;
+  
+    default:
+      "";
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -18,7 +29,7 @@ function renderLicenseSection(license) {
     //     break;
 
     default:
-        "No License Used";
+        " ";
 }
 }
 

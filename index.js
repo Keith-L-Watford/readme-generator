@@ -1,13 +1,12 @@
-// TODO: Include packages needed for this application
+// TODO: Include packages needed for this application ✅
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// TODO: Create an array of questions for user input ✅
 // const questions = [];
 inquirer
-    .prompt([
-        {
+    .prompt([{
             type: 'input',
             message: 'What is the name of your project?',
             name: 'title',
@@ -35,6 +34,11 @@ inquirer
         },
         {
             type: 'input',
+            message: 'Write any tests for your application.',
+            name: 'test',
+        },
+        {
+            type: 'input',
             message: 'Please list any contributing parties.',
             name: 'contributing',
         },
@@ -45,13 +49,12 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Write any tests for your application.',
-            name: 'test',
+            message: 'Whats your email?',
+            name: 'email',
         },
     ])
 
-    // TODO: Create a function to write README file
-    // function writeToFile(fileName, data) {}
+    // TODO: Create a function to write README file ✅
     .then((answers) => {
         console.log(answers);
 
@@ -79,7 +82,8 @@ ${answers.contributing} \n
 ${answers.test} \n 
 
 ## Questions
-If you have any questions about my project, please find me on <a href="https://github.com/${answers.github}/" target="blank">GitHub</a>! \n
+If you have any questions about my project, please send me an  <a href="mailto:${answers.email}/" target="blank">email</a>! \n
+Find me on <a href="https://github.com/${answers.github}/" target="blank">GitHub</a> too! \n
 
 ## License
 -----------
