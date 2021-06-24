@@ -79,7 +79,8 @@ inquirer
         
         let readMeFile = `# ${answers.title} \n
 ## Description
-${answers.description} \n 
+${licenseBadge} \n
+${answers.description}  \n 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -105,7 +106,7 @@ If you have any questions about my project, please send me an  <a href="mailto:$
 Find me on <a href="https://github.com/${answers.github}/" target="blank">GitHub</a> too! \n
 
 ## License
-${licenseBadge} \n
+ ${licenseTest} \n
 `;
 
 
