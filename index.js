@@ -330,7 +330,7 @@ Find me on <a href="https://github.com/${answers.github}/" target="_blank">GitHu
 `;
 
 
-        fs.writeFile('./createdREADMEs/test33.md', readMeFile, (err) =>
+        fs.writeFile('./createdREADMEs/README.md', readMeFile, (err) =>
             err ? console.error(err) : console.log('Success!')
         );
 
