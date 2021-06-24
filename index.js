@@ -7,52 +7,53 @@ const fs = require('fs');
 // const questions = [];
 inquirer
     .prompt([
-        // {
-        //     type: 'input',
-        //     message: 'What is the name of your project?',
-        //     name: 'title',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'Describe your project.',
-        //     name: 'description',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'What are the steps required to install your project?',
-        //     name: 'installation',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'Provide instructions and examples for use for your project.',
-        //     name: 'usage',
-        // },
+        {
+            type: 'input',
+            message: 'What is the name of your project?',
+            name: 'title',
+        },
+        {
+            type: 'input',
+            message: 'Describe your project.',
+            name: 'description',
+        },
+        {
+            type: 'input',
+            message: 'What are the steps required to install your project?',
+            name: 'installation',
+        },
+        {
+            type: 'input',
+            message: 'Provide instructions and examples for use for your project.',
+            name: 'usage',
+        },
         {
             type: 'list',
             message: 'Which license would you like to use for your project?',
             choices: ['The Unlicense', 'MIT', 'Apache 2.0 License', 'Mozilla Public License 2.0', 'Boost'],
             name: 'license',
+            default: 'MIT',
         },
-        // {
-        //     type: 'input',
-        //     message: 'Write any tests for your application.',
-        //     name: 'test',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'Please list any contributing parties.',
-        //     name: 'contributing',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'What is your github username?',
-        //     name: 'github',
-        // },
-        // {
-        //     type: 'input',
-        //     message: 'What is your email?',
-        //     name: 'email',
-        // },
+        {
+            type: 'input',
+            message: 'Write any tests for your application.',
+            name: 'test',
+        },
+        {
+            type: 'input',
+            message: 'Please list any contributing parties.',
+            name: 'contributing',
+        },
+        {
+            type: 'input',
+            message: 'What is your github username?',
+            name: 'github',
+        },
+        {
+            type: 'input',
+            message: 'What is your email?',
+            name: 'email',
+        },
     ])
 
     // TODO: Create a function to write README file ✅
@@ -298,8 +299,8 @@ DEALINGS IN THE SOFTWARE.`
         
         let readMeFile = `# ${answers.title} \n
 ## Description
-${licenseBadge} \n
 ${answers.description}  \n 
+${licenseBadge} \n
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -322,14 +323,14 @@ ${answers.test} \n
 
 ## Questions
 If you have any questions about my project, please send me an  <a href="mailto:${answers.email}/" target="blank">email</a>. \n
-Find me on <a href="https://github.com/${answers.github}/" target="blank">GitHub</a> too! \n
+Find me on <a href="https://github.com/${answers.github}/" target="_blank">GitHub</a> too! \n
 
 ## License
  ${licenseText} \n
 `;
 
 
-        fs.writeFile('./createdREADMEs/test.md', readMeFile, (err) =>
+        fs.writeFile('./createdREADMEs/test33.md', readMeFile, (err) =>
             err ? console.error(err) : console.log('Success!')
         );
 
