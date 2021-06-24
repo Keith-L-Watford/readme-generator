@@ -1,11 +1,7 @@
-# README.md Generator
+# README(.)md Generator
 
 ## Description
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+I created this app as an introductionary project to node.js. Im also really enjoying JavaScript overall and I wanted to also practice creating with the language. I decided on a README generator because I constantly have to create one for assignments and I wanted to stream line that process and save some time. My biggest obstacle with this was turning the license options and turning them into the corresponding badge and text. Creating a new variable and cycling it through a if/else statement solved that issue for me. 
 
 ## Table of Contents (Optional)
 If your README is long, add a table of contents to make it easy for users to find what they need.
@@ -18,7 +14,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 npm i
 
 ## Usage
-After installing inquirer, opening the index.js in the terminal/gitbash of your choice. Then input 'node index.js' to start the application. <br>
+After installing inquirer, open the index.js in the terminal/gitbash of your choice. Then input 'node index.js' followed by enter to start the application. <br>
 Click <a href="https://drive.google.com/file/d/1qRvGWVdKMkwjuFocJDWGi9jw6xBhtt61/view" target="_blank">here</a> for a video demonstration of the app. 
 
 ## Credits
